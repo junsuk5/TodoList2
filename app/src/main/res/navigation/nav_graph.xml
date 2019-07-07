@@ -26,5 +26,10 @@
         android:id="@+id/updateFragment"
         android:name="com.exmaple.todolist.UpdateFragment"
         android:label="fragment_update"
-        tools:layout="@layout/fragment_update" />
+        tools:layout="@layout/fragment_update" >
+        <argument
+            android:name="id"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
 </navigation>

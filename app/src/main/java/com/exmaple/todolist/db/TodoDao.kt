@@ -8,6 +8,9 @@ interface TodoDao {
     @Query("SELECT * FROM Todo")
     fun getAll(): List<Todo>
 
+    @Query("SELECT * FROM Todo WHERE id=:id")
+    fun getTodo(id: Long): Todo?
+
     @Insert
     fun insert(todo: Todo)
 

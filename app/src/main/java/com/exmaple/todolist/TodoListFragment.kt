@@ -46,7 +46,10 @@ class TodoListFragment : Fragment() {
 
         // Adapter
         val adapter = TodoAdapter {
+            val action = TodoListFragmentDirections.actionTodoListFragmentToUpdateFragment(it.id)
 
+            // 클릭
+            findNavController().navigate(action)
         }
         adapter.items = todos
 
